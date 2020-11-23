@@ -71,7 +71,7 @@ class ZomatoAPI:
             # Rating
             rating = list()
             rating.append(best_rated_restaurant[i]['restaurant']['user_rating']['aggregate_rating'])
-            rating.append(best_rated_restaurant[i]['restaurant']['user_rating']['rating_color'])
+            rating.append('#' + best_rated_restaurant[i]['restaurant']['user_rating']['rating_color'])
             res_details.append(rating)
             
             restaurants.append(res_details)

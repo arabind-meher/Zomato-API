@@ -20,6 +20,13 @@ def get_location():
     api = ZomatoAPI()
     location = request.args.get('location')
     location_dict = api.location(location)
+
+    location = list()
+    location.append(location_dict['city_name'])
+    location.append(location_dict['country_name'])
+    location.append(location_dict['latitude'])
+    location.append(location_dict['longitude'])
+
     restaurants = api.location_details(location_dict['entity_id'], location_dict['entity_type'])
 
     return render_template('location.html', location=location, restaurants=restaurants)
