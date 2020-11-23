@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Location</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <h1>Zomato | API</h1>
+        <a href="#">
+            <img class="icon" title="Code" src="/static/images/code.png" alt="code">
+        </a>
+        <a href="#">
+            <img class="icon" title="Developer" src="/static/images/developer.png" alt="developer">
+        </a>
+        <a href="https://developers.zomato.com/">
+            <img class="icon" title="Zomato API" src="/static/images/api.png" alt="api">
+        </a>
+        <a href="https://www.zomato.com">
+            <img class="icon" title="Zomato" src="/static/images/zomato.png" alt="zomato">
+        </a>
+        <a href="{{ url_for('home') }}">
+            <img class="icon" title="Home" src="/static/images/home.png" alt="home">
+        </a>
+    </div>
+
+    <h1>Location: {{ location }}</h1>
+    <br>
+
+    <div class="container">
+        <table class="restaurant-data">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Cuisines</th>
+                    <th>Establishments</th>
+                    <th>Highlights</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for restaurant in restaurants %}
+                <tr>
+                    <td><img src="{{restaurant[0]}}" alt="restaurant[1]"></td>
+                    <td>{{restaurant[1]}}</td>
+                    <td>
+                        {% for cuisine in restaurant[2] %}
+                        {{cuisine}} <br>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for establishment in restaurant[3] %}
+                        {{establishment}} <br>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for highlight in restaurant[4] %}
+                        {{highlight}} <br>
+                        {% endfor %}
+                    </td>
+                    <td>{{restaurant[5]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

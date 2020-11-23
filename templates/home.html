@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Zomato API</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <h1>Zomato | API</h1>
+        <a href="#">
+            <img class="icon" title="Code" src="/static/images/code.png" alt="code">
+        </a>
+        <a href="#">
+            <img class="icon" title="Developer" src="/static/images/developer.png" alt="developer">
+        </a>
+        <a href="https://developers.zomato.com/">
+            <img class="icon" title="Zomato API" src="/static/images/api.png" alt="api">
+        </a>
+        <a href="https://www.zomato.com">
+            <img class="icon" title="Zomato" src="/static/images/zomato.png" alt="zomato">
+        </a>
+        <a href="{{ url_for('home') }}">
+            <img class="icon" title="Home" src="/static/images/home.png" alt="home">
+        </a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <form action="{{ url_for('get_location') }}" method="GET">
+            <label>
+                <input type="text" name="location" class="location" placeholder="Enter Location">
+            </label>
+            <input type="submit" name="search" class="search" value="Search">
+        </form>
+    </div>
+</body>
+
+</html>

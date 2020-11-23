@@ -1,0 +1,127 @@
+body {
+  margin: 1%;
+  background-image: url(/static/images/background.png);
+  text-align: center;
+}
+
+.navigation {
+  margin: auto;
+  background-color: transparent;
+  width: 50%;
+  padding: 20px;
+  border-style: solid;
+  overflow: hidden;
+}
+
+.navigation h1 {
+  margin: auto;
+  background-color: #990000;
+  color: #ffffff;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 35px;
+  padding: 10px;
+  border-color: #000000;
+  float: left;
+}
+
+.navigation a img {
+  height: 64px;
+  width: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+}
+
+.icon:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.location {
+  margin: auto;
+  height: 50px;
+  width: 500px;
+  background-color: #e0e0eb;
+  font-size: 25px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 9px #999999;
+}
+
+.location:hover:active {
+  box-shadow: 0 5px #666666;
+  transform: translateY(4px);
+}
+
+.search {
+  margin: 15px;
+  padding: 10px 25px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #666699;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999999;
+}
+
+.search:hover {
+  background-color: #52527a;
+}
+
+.search:hover:active {
+  background-color: #33334d;
+  box-shadow: 0 5px #666666;
+  transform: translateY(4px);
+}
+
+table.restaurant-data {
+  margin: auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: left;
+}
+
+table.restaurant-data td,
+table.restaurant-data th {
+  border: 1px solid #555555;
+  padding: 5px 9px;
+}
+
+table.restaurant-data tbody td {
+  font-size: 15px;
+  color: #000000;
+}
+
+table.restaurant-data thead {
+  background: #990000;
+}
+
+table.restaurant-data thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+table.restaurant-data tfoot td {
+  font-size: 13px;
+}
+
+table.restaurant-data tfoot .links {
+  text-align: right;
+}
+
+table.restaurant-data tfoot .links a {
+  display: inline-block;
+  background: #792396;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
